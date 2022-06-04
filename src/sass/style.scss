@@ -5,3 +5,31 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav {
+  &__mobile {
+    &-head {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      .mobile {
+        &-logo {
+          grid-column: 1/2;
+        }
+        &-burger {
+          grid-column: 2/3;
+        }
+      }
+    }
+  }
+}
