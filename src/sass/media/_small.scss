@@ -1,0 +1,24 @@
+@media (min-width: 552px) {
+  .nav {
+    &__mobile {
+      &-logo {
+        text-align: center;
+        grid-column: 1/2;
+      }
+      
+      &-body {
+        padding-top: 4em;
+      }
+  
+      &-link {
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+        padding: .5em;
+        font-size: 2rem;
+        border-bottom: 1px solid #fff;
+  
+      }
+    }
+  }
+}

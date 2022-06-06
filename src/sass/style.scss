@@ -1,3 +1,7 @@
+@import 'utils/_hamburger';
+
+// globals
+
 *,
 *::after,
 *::before {
@@ -5,3 +9,75 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+// navigation
+
+.nav {
+  &__mobile {
+    &-head {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      padding: 1em 0;
+      border-bottom: 1px solid #fff;
+    }
+    &-logo {
+      text-align: center;
+      grid-column: 1/2;
+    }
+    &-burger {
+      grid-column: 2/3;
+      display: flex;
+      justify-content: center;
+
+      
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .hamburger.is-active .hamburger-inner,
+      .hamburger.is-active .hamburger-inner::before,
+      .hamburger.is-active .hamburger-inner::after {
+        background-color: #fff;
+      }
+    }
+
+    &-body {
+      padding-top: 3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+    }
+
+    &-link {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      padding: 0.5em;
+      font-size: 2rem;
+      border-bottom: 1px solid #fff;
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@import 'media/small';
+@import 'media/medium';
