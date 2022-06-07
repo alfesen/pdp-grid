@@ -54,6 +54,7 @@ a {
       justify-content: center;
       align-items: center;
       grid-column: 1/2;
+      transform: scale(1.4)
     }
     &-burger {
       grid-column: 2/3;
@@ -103,3 +104,4 @@ a {
 
 @import 'media/small';
 @import 'media/medium';
+@import 'media/large';

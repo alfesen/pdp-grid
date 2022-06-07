@@ -1,0 +1,13 @@
+@media (min-width: 992px) {
+  .nav {
+    grid-column: 1/2;
+    &__desktop {
+      &-logo {
+        transform: rotate(0) scale(1.1);
+        padding: 2em 0;
+        align-self: flex-start;
+        text-align: center;
+      }
+    }
+  }
+}
