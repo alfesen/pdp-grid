@@ -12,15 +12,15 @@
 </head>
 
 <body>
-  <nav class="nav">
-    <div class="nav__mobile">
+  
+    <nav class="nav nav__mobile">
   <div class="nav__mobile-head">
     <div class="nav__mobile-logo">
       <h2>Plague Dev</h2>
       <p>Alexander Fesenko</p>
     </div>
     <div class="nav__mobile-burger">
-      <button class="hamburger hamburger--spring is-active" type="button">
+      <button class="hamburger hamburger--spring" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
@@ -41,27 +41,33 @@
       <i class="fa-solid fa-baby"></i>
     </div>
   </div>
-</div>
+</nav>
 
-<div class="nav__desktop">
+<nav class="nav nav__desktop">
   <div class="nav__desktop-logo">
     <h2>Plague Dev</h2>
     <p>Alexander Fesenko</p>
   </div>
   <div class="nav__desktop-link">
     <i class="fa-solid fa-baby"></i>
-    <a href="#">Link 1</a>
+    <div class="nav__link">
+      <a href="#">Link 1</a>
+    </div>
   </div>
   <div class="nav__desktop-link">
     <i class="fa-solid fa-baby"></i>
-    <a href="#">Link 3</a>
+    <div class="nav__link">
+      <a href="#">Link 2</a>
+    </div>
   </div>
   <div class="nav__desktop-link">
     <i class="fa-solid fa-baby"></i>
-    <a href="#">Link 3</a>
+    <div class="nav__link">
+      <a href="#">Link 3</a>
+    </div>
   </div>
-</div>
-  </nav>
+</nav>
+  
 
   <script src="./dist/js/main.min.js">
   </script>
