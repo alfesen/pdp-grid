@@ -74,3 +74,17 @@
     }
   }
 }
+
+@media (max-height: 552px) {
+
+  .nav {
+    &__desktop {
+      &-logo {
+        grid-row: 1/4;
+        transform: rotate(0) scale(1);
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
