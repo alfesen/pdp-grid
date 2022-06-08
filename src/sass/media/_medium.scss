@@ -41,6 +41,7 @@
         position: relative;
         justify-content: center;
         align-items: center;
+        
         &:hover .nav__link {
           right: -300px;
         }
@@ -69,6 +70,55 @@
           font-size: 2rem;
           transition: right 0.3s ease-out;
           z-index: -5;
+          overflow: hidden;
+
+          a {
+            padding: 1em;
+            transition: color 0.2s;
+            width: 100%;
+            text-align: right;
+
+            &:hover {
+              color: #aaa;
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 1px;
+            background-color: #fff;
+            right: 2em;
+            bottom: 20%;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transform: scale(0);
+            transform-origin: left;
+            opacity: 0;
+            transition: transform 0.3s 0.2s, opacity 0.6s .2s;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 1px;
+            background-color: #fff;
+            right: 2em;
+            top: 20%;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transform: scale(0);
+            transform-origin: right;
+            opacity: 0;
+            transition: transform 0.3s 0.2s, opacity 0.6s .2s;
+          }
+        }
+
+        &:hover .nav__link::before, &:hover .nav__link::after {
+          transform: scale(1);
+          opacity: .7;
         }
       }
     }
@@ -76,7 +126,6 @@
 }
 
 @media (max-height: 552px) {
-
   .nav {
     &__desktop {
       &-logo {
