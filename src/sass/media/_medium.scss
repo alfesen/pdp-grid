@@ -127,6 +127,7 @@
 }
 
 @media (max-height: 552px) {
+
   .nav {
     &__desktop {
       &-logo {
@@ -136,5 +137,9 @@
         text-align: center;
       }
     }
+  }
+
+  .boxes {
+    margin-top: 3em;
   }
 }
