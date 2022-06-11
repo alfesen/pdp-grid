@@ -26,12 +26,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin: 0 auto;
-        transform: rotate(-90deg) scale(1.4);
+        font-family: f.$heading;
+        font-size: .6rem;
+        transform: rotate(-90deg) scale(2);
         cursor: pointer;
         transition: color 0.2s;
         &:hover {
-          color: #aaa;
+          color: c.$whiteHover;
         }
       }
 
@@ -47,7 +50,7 @@
         }
 
         &:hover i {
-          color: #aaa;
+          color: c.$whiteHover;
         }
 
         i {
@@ -66,7 +69,7 @@
           height: 100%;
           width: 300px;
           padding: 0 2em;
-          background-color: #222;
+          background-color: c.$navDarkGrey;
           font-size: 2rem;
           transition: right 0.3s ease-out;
           z-index: -5;
@@ -79,7 +82,7 @@
             text-align: right;
 
             &:hover {
-              color: #aaa;
+              color: c.$whiteHover;
             }
           }
 
@@ -88,7 +91,7 @@
             position: absolute;
             width: 80%;
             height: 1px;
-            background-color: #fff;
+            background-color: c.$white;
             right: 2em;
             bottom: 20%;
             border: 1px solid transparent;
@@ -104,7 +107,7 @@
             position: absolute;
             width: 80%;
             height: 1px;
-            background-color: #fff;
+            background-color: c.$white;
             right: 2em;
             top: 20%;
             border: 1px solid transparent;
@@ -124,6 +127,10 @@
       }
     }
   }
+
+  .boxes {
+    display: none;
+  }
 }
 
 @media (max-height: 552px) {
@@ -132,8 +139,8 @@
     &__desktop {
       &-logo {
         grid-row: 1/4;
-        transform: rotate(0) scale(1);
-        font-size: 1rem;
+        font-size: 0.6rem;
+        transform: rotate(0) scale(1.5);
         text-align: center;
       }
     }

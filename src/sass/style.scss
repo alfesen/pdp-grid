@@ -25,7 +25,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(14, 10%);
   background-color: #333;
-  color: #fff;
+  color: c.$white;
   height: 100vh;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 a {
-  color: #fff;
+  color: c.$white;
   text-decoration: none;
 }
 
@@ -53,20 +53,23 @@ a {
     &-head {
       display: grid;
       grid-column: 1/3;
-      background-color: #222;
+      background-color: c.$navDarkGrey;
       z-index: 2;
       padding: 1em 0;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid c.$white;
       z-index: 50;
     }
+
     &-logo {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      font-family: f.$heading;
       grid-column: 1/2;
       transform: scale(1.4);
     }
+
     &-burger {
       grid-column: 2/3;
       display: flex;
@@ -75,14 +78,14 @@ a {
       .hamburger-inner,
       .hamburger-inner::before,
       .hamburger-inner::after {
-        background-color: #fff;
+        background-color: c.$white;
         text-align: center;
       }
 
       .hamburger.is-active .hamburger-inner,
       .hamburger.is-active .hamburger-inner::before,
       .hamburger.is-active .hamburger-inner::after {
-        background-color: #fff;
+        background-color: c.$white;
       }
     }
 
@@ -127,7 +130,7 @@ a {
       justify-content: space-between;
       padding: 0.5em;
       font-size: 2rem;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid c.$white;
 
       a {
         display: block;
