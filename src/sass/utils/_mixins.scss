@@ -1,0 +1,7 @@
+@use 'utils/colors' as c;
+
+@mixin boxBackground($img) {
+  background: c.$shadow, url($img);
+    background-position: center center;
+    background-size: cover;
+}
