@@ -2,8 +2,18 @@
   .nav {
     &__desktop {
       &-logo {
-        grid-row: 1/2;
-        transform: rotate(-90deg) scale(1.3);
+        grid-row: 1/4;
+        margin: 6em auto;
+      }
+    }
+  }
+}
+
+@media (min-height: 556px) {
+  .nav {
+    &__desktop {
+      &-logo {
+        grid-row: 1/3;
         margin: 6em auto;
       }
     }
