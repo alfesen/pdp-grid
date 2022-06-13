@@ -5,3 +5,9 @@
     background-position: center center;
     background-size: cover;
 }
+
+@mixin lightBackground($img) {
+  background: c.$lightShadow, url($img);
+    background-position: center center;
+    background-size: cover;
+}

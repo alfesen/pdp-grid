@@ -3,6 +3,7 @@
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(11, 1fr);
     height: 100vh;
+    grid-gap: 0;
   }
 
   .nav {
@@ -29,7 +30,7 @@
         align-items: center;
         margin: 0 auto;
         font-family: f.$heading;
-        font-size: .6rem;
+        font-size: 0.6rem;
         transform: rotate(-90deg) scale(2);
         cursor: pointer;
         transition: color 0.2s;
@@ -128,13 +129,43 @@
     }
   }
 
+  main {
+    grid-row: 1 / 14;
+    grid-column: 4/25;
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(14, 1fr);
+  }
+
+  .hero {
+    grid-row: 1/5;
+    grid-column: 1/21;
+    @include m.lightBackground('../../../dist/img/desktop-hero.jpg');
+    font-family: f.$heading;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      &-quote {
+        margin-bottom: .5em;
+        &-author {
+          align-self: flex-end;
+        }
+      }
+    }
+
+  }
+
   .boxes {
     display: none;
   }
 }
 
 @media (max-height: 552px) {
-
   .nav {
     &__desktop {
       &-logo {
@@ -148,5 +179,11 @@
 
   .boxes {
     margin-top: 3em;
+  }
+
+  .hero {
+    grid-row: 1/6;
+    @include m.lightBackground('../../../dist/img/desktop-hero.jpg');
+    font-size: 1.4rem;
   }
 }
