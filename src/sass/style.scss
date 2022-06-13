@@ -49,7 +49,7 @@ a {
     display: grid;
     grid-column: 1/3;
     grid-row: 1/2;
-    
+
     &-head {
       display: grid;
       grid-column: 1/3;
@@ -121,6 +121,44 @@ a {
             animation-delay: 0.3s;
           }
         }
+
+        .nav__mobile-hero {
+          animation: mobNavItems 0.5s linear;
+          animation-delay: 0.3s;
+        }
+      }
+    }
+
+    &-hero {
+      margin-top: 3em;
+      padding: 2em;
+      height: auto;
+      width: 80%;
+      box-shadow: 0 0 5px #ffffff11;
+      @include m.boxBackground('../../dist/img/mobile-nav-hero.jpg');
+
+
+      &-content {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: f.$quote;
+        border: 1px solid c.$white;
+      }
+    }
+
+    &-quote {
+      margin-bottom: 1em;
+      padding: 1em;
+      font-size: 1.8rem;
+      font-weight: 300;
+      &-author {
+        align-self: flex-end;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        font-family: f.$author;
+        font-size: 1.8rem;
       }
     }
 
