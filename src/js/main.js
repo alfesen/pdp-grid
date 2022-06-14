@@ -28,8 +28,11 @@ const handleBoxClosing = () => {
         box.firstElementChild.classList.toggle('open')
       })
     } else {
-      box.addEventListener('mouseover', () => {
-        box.firstElementChild.classList.toggle('open')
+      box.addEventListener('mouseenter', () => {
+        box.firstElementChild.classList.add('open')
+      })
+      box.addEventListener('mouseleave', () => {
+        box.firstElementChild.classList.remove('open')
       })
     }
   })
