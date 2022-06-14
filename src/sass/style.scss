@@ -192,7 +192,9 @@ main {
   grid-gap: 1em;
 
   &__box {
+    position: relative;
     height: auto;
+    overflow: hidden;
     @include m.boxBackground('https://picsum.photos/640/360');
 
     &-content {
@@ -258,7 +260,47 @@ main {
     &:nth-child(8) {
       grid-row: 10/13;
     }
+
+    .closing {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-family: f.$heading;
+      transition: transform .4s;
+      
+      &:nth-child(odd) {
+        background-color: c.$oddBox
+      }
+
+      &:nth-child(even) {
+        background-color: c.$evenBox
+      }
+      
+    }
+    
+    
   }
+  .wisdom .open{
+    transform: translateX(-100%)
+  }
+
+  .thinking .open{
+    transform: translateY(-100%)
+  }
+
+  .critique .open{
+    transform: translateX(100%)
+  }
+}
+
+.hero {
+  display: none;
 }
 
 @import 'media/small';

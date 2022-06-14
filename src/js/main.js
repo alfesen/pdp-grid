@@ -2,6 +2,7 @@ const burgerBtn = document.querySelector('.nav__mobile-burger')
 const burger = document.querySelector('.hamburger')
 const mobNavBody = document.querySelector('.nav__mobile-body')
 const mobNavItems = document.querySelectorAll('.nav__mobile-link')
+const boxes = document.querySelectorAll('.boxes__box')
 
 const handleNav = () => {
   burger.classList.toggle('is-active')
@@ -20,4 +21,19 @@ const hideNav = () => {
   })
 }
 
+const handleBoxClosing = () => {
+  boxes.forEach(box => {
+    if (document.body.clientWidth < 768) {
+      box.addEventListener('click', () => {
+        box.firstElementChild.classList.toggle('open')
+      })
+    } else {
+      box.addEventListener('mouseover', () => {
+        box.firstElementChild.classList.toggle('open')
+      })
+    }
+  })
+}
+
+handleBoxClosing()
 burgerBtn.addEventListener('click', handleNav)
