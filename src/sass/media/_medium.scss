@@ -14,7 +14,7 @@
     &__desktop {
       display: grid;
       grid-column: 1/4;
-      grid-row: 1/-1;
+      grid-row: 1/14;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(14, 1fr);
       background-color: #222;
@@ -43,6 +43,7 @@
         position: relative;
         justify-content: center;
         align-items: center;
+        text-transform: capitalize;
 
         &:hover .nav__link {
           right: -300px;
@@ -209,6 +210,17 @@
         grid-column: 9/13;
       }
     }
+  }
+
+  .footer {
+    grid-row: 13/14;
+    grid-column: 1/-1;
+    background-color: #444;
+  
+    p {
+      font-size: 1.4rem;
+      padding: 2em
+    };
   }
 }
 
