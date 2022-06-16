@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
   body {
     grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     grid-gap: 0;
   }
 
@@ -43,7 +44,6 @@
         position: relative;
         justify-content: center;
         align-items: center;
-        text-transform: capitalize;
 
         &:hover .nav__link {
           right: -300px;
@@ -213,14 +213,17 @@
   }
 
   .footer {
-    grid-row: 13/14;
-    grid-column: 1/-1;
+    grid-row: 13 / 14;
+    grid-column: 1 / 25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #444;
-  
+
     p {
       font-size: 1.4rem;
-      padding: 2em
-    };
+      padding: 2em;
+    }
   }
 }
 
@@ -241,7 +244,6 @@
       }
     }
   }
-
 
   .hero {
     font-size: 1.4rem;

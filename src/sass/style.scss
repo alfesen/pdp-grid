@@ -36,6 +36,7 @@ body {
 a {
   color: c.$white;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 // navigation
@@ -177,7 +178,7 @@ a {
 }
 
 main {
-  grid-row: 2/13;
+  grid-row: 2/15;
   grid-column: 1/3;
 }
 
