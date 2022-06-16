@@ -195,7 +195,7 @@ main {
   &__box {
     position: relative;
     overflow: hidden;
-    @include m.boxBackground('https://picsum.photos/640/360');
+    
 
     &-content {
       display: flex;
@@ -237,30 +237,39 @@ main {
 
     &:nth-child(1) {
       grid-row: 1/4;
+      @include m.boxBackground('../../dist/img/boxes/img-1.jpg');
     }
 
     &:nth-child(2) {
+      @include m.boxBackground('../../dist/img/boxes/img-3.jpg');
       grid-row: 1/4;
     }
     &:nth-child(3) {
+      @include m.boxBackground('../../dist/img/boxes/img-5.jpg');
       grid-row: 4/7;
     }
     &:nth-child(4) {
+      @include m.boxBackground('../../dist/img/boxes/img-4.jpg');
       grid-row: 4/7;
     }
     &:nth-child(5) {
+      @include m.boxBackground('../../dist/img/boxes/img-6.jpg');
       grid-row: 7/10;
     }
     &:nth-child(6) {
+      @include m.boxBackground('../../dist/img/boxes/img-7.jpg');
       grid-row: 7/10;
     }
     &:nth-child(7) {
+      @include m.boxBackground('../../dist/img/boxes/img-8.jpg');
       grid-row: 10/13;
     }
     &:nth-child(8) {
+      @include m.boxBackground('../../dist/img/boxes/img-9.jpg');
       grid-row: 10/13;
     }
     &:nth-child(9) {
+      @include m.boxBackground('../../dist/img/boxes/img-2.jpg');
       grid-row: 13/16;
     }
 
