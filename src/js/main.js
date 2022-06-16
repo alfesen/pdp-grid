@@ -74,21 +74,6 @@ const handleTagLinks = () => {
     })
   })
 
-  critiqueLink.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault()
-      critiqueBoxesClosing.forEach(box => {
-        box.classList.add('open')
-      })
-      wisdomBoxesClosing.forEach(box => {
-        box.classList.remove('open')
-      })
-      thinkingBoxesClosing.forEach(box => {
-        box.classList.remove('open')
-      })
-    })
-  })
-
   resetLink.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault()
