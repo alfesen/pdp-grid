@@ -23,18 +23,9 @@ const hideNav = () => {
 
 const handleBoxClosing = () => {
   boxes.forEach(box => {
-    if (document.body.clientWidth < 768) {
-      box.addEventListener('click', () => {
-        box.firstElementChild.classList.toggle('open')
-      })
-    } else {
-      box.addEventListener('mouseenter', () => {
-        box.firstElementChild.classList.add('open')
-      })
-      box.addEventListener('mouseleave', () => {
-        box.firstElementChild.classList.remove('open')
-      })
-    }
+    box.addEventListener('click', () => {
+      box.firstElementChild.classList.toggle('open')
+    })
   })
 }
 
