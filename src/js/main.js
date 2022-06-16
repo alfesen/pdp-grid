@@ -4,9 +4,6 @@ const mobNavBody = document.querySelector('.nav__mobile-body')
 const mobNavItems = document.querySelectorAll('.nav__mobile-link')
 const boxes = document.querySelectorAll('.boxes__box')
 
-const wisdomBoxesClosing = document.querySelectorAll('.wisdom .closing')
-const thinkingBoxesClosing = document.querySelectorAll('.thinking .closing')
-const critiqueBoxesClosing = document.querySelectorAll('.critique .closing')
 const boxesClosing = document.querySelectorAll('.boxes__box .closing')
 
 const wisdomLink = document.querySelectorAll('.wisdom__link')
@@ -41,65 +38,44 @@ const handleBoxClosing = () => {
 
 const handleTagLinks = () => {
   wisdomLink.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', e => {
       e.preventDefault()
-      wisdomBoxesClosing.forEach(box => {
-        box.classList.add('open')
-      })
-      thinkingBoxesClosing.forEach(box => {
-        box.classList.remove('open')
-      })
-      critiqueBoxesClosing.forEach(box => {
-        box.classList.remove('open')
+      boxesClosing.forEach(box => {
+        if (box.parentElement.classList.contains('wisdom')) {
+          box.classList.add('open')
+        } else {
+          box.classList.remove('open')
+        }
       })
     })
   })
   thinkingLink.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', e => {
       e.preventDefault()
-      thinkingBoxesClosing.forEach(box => {
-        box.classList.add('open')
-      })
-      wisdomBoxesClosing.forEach(box => {
-        box.classList.remove('open')
-      })
-      critiqueBoxesClosing.forEach(box => {
-        box.classList.remove('open')
+      boxesClosing.forEach(box => {
+        if (box.parentElement.classList.contains('thinking')) {
+          box.classList.add('open')
+        } else {
+          box.classList.remove('open')
+        }
       })
     })
   })
   critiqueLink.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', e => {
       e.preventDefault()
-      critiqueBoxesClosing.forEach(box => {
-        box.classList.add('open')
-      })
-      wisdomBoxesClosing.forEach(box => {
-        box.classList.remove('open')
-      })
-      thinkingBoxesClosing.forEach(box => {
-        box.classList.remove('open')
-      })
-    })
-  })
-
-  critiqueLink.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault()
-      critiqueBoxesClosing.forEach(box => {
-        box.classList.add('open')
-      })
-      wisdomBoxesClosing.forEach(box => {
-        box.classList.remove('open')
-      })
-      thinkingBoxesClosing.forEach(box => {
-        box.classList.remove('open')
+      boxesClosing.forEach(box => {
+        if (box.parentElement.classList.contains('critique')) {
+          box.classList.add('open')
+        } else {
+          box.classList.remove('open')
+        }
       })
     })
   })
 
   resetLink.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', e => {
       e.preventDefault()
       boxesClosing.forEach(box => {
         box.classList.remove('open')
