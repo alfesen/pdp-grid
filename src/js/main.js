@@ -11,6 +11,8 @@ const thinkingLink = document.querySelectorAll('.thinking__link')
 const critiqueLink = document.querySelectorAll('.critique__link')
 const resetLink = document.querySelectorAll('.reset__link')
 
+const yearSpan = document.querySelector('.year')
+
 const handleNav = () => {
   burger.classList.toggle('is-active')
   mobNavBody.classList.toggle('show-nav')
@@ -84,6 +86,13 @@ const handleTagLinks = () => {
   })
 }
 
+const handleYear = () => {
+  const year = new Date().getFullYear();
+  yearSpan.textContent = year
+}
+
+
+burgerBtn.addEventListener('click', handleNav)
 handleTagLinks()
 handleBoxClosing()
-burgerBtn.addEventListener('click', handleNav)
+handleYear()
