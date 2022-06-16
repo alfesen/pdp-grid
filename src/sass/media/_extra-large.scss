@@ -10,7 +10,6 @@
   }
 
   .hero {
-    @include m.lightBackground('../../../dist/img/desktop-hero.jpg');
     font-size: 2.2rem;
   }
 
