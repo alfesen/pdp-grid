@@ -9,7 +9,7 @@ const boxesClosing = document.querySelectorAll('.boxes__box .closing')
 const wisdomLink = document.querySelectorAll('.wisdom__link a')
 const thinkingLink = document.querySelectorAll('.thinking__link a')
 const critiqueLink = document.querySelectorAll('.critique__link a')
-const resetLink = document.querySelectorAll('.reset__link')
+const resetLink = document.querySelectorAll('.reset__link a')
 
 const yearSpan = document.querySelector('.year')
 
