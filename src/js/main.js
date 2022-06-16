@@ -4,6 +4,16 @@ const mobNavBody = document.querySelector('.nav__mobile-body')
 const mobNavItems = document.querySelectorAll('.nav__mobile-link')
 const boxes = document.querySelectorAll('.boxes__box')
 
+const wisdomBoxesClosing = document.querySelectorAll('.wisdom .closing')
+const thinkingBoxesClosing = document.querySelectorAll('.thinking .closing')
+const critiqueBoxesClosing = document.querySelectorAll('.critique .closing')
+const boxesClosing = document.querySelectorAll('.boxes__box .closing')
+
+const wisdomLink = document.querySelectorAll('.wisdom__link')
+const thinkingLink = document.querySelectorAll('.thinking__link')
+const critiqueLink = document.querySelectorAll('.critique__link')
+const resetLink = document.querySelectorAll('.reset__link')
+
 const handleNav = () => {
   burger.classList.toggle('is-active')
   mobNavBody.classList.toggle('show-nav')
@@ -29,5 +39,75 @@ const handleBoxClosing = () => {
   })
 }
 
+const handleTagLinks = () => {
+  wisdomLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      wisdomBoxesClosing.forEach(box => {
+        box.classList.add('open')
+      })
+      thinkingBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+      critiqueBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+    })
+  })
+  thinkingLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      thinkingBoxesClosing.forEach(box => {
+        box.classList.add('open')
+      })
+      wisdomBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+      critiqueBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+    })
+  })
+  critiqueLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      critiqueBoxesClosing.forEach(box => {
+        box.classList.add('open')
+      })
+      wisdomBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+      thinkingBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+    })
+  })
+
+  critiqueLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      critiqueBoxesClosing.forEach(box => {
+        box.classList.add('open')
+      })
+      wisdomBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+      thinkingBoxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+    })
+  })
+
+  resetLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      boxesClosing.forEach(box => {
+        box.classList.remove('open')
+      })
+    })
+  })
+}
+
+handleTagLinks()
 handleBoxClosing()
 burgerBtn.addEventListener('click', handleNav)
